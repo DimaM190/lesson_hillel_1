@@ -1,0 +1,29 @@
+git init — инициализация локального репозитория
+git status — текущее состояние репозитория
+git config --global user.name "NAME" — задать имя пользователя
+git config --global user.email "EMAIL" — задать email пользователя
+git add file — добавить файл в индекс
+git add . — добавить все изменения в индекс
+git commit -m "msg" — зафиксировать изменения
+git commit -am "msg" — add + commit для отслеживаемых файлов
+git log — история коммитов
+git log --oneline — краткая история коммитов
+git diff — показать изменения
+git branch — список веток
+git branch name — создать ветку
+git checkout name — переключиться на ветку
+git checkout -b name — создать и переключиться на ветку
+git switch name — переключиться на ветку (новый синтаксис)
+git switch -c name — создать и переключиться на ветку
+git merge name — слить ветку в текущую
+git branch -d name — удалить ветку
+git remote add origin URL — добавить удалённый репозиторий
+git remote -v — показать удалённые репозитории
+git push — отправить изменения на сервер
+git push -u origin main — первый push с привязкой ветки
+git pull — получить и слить изменения
+git fetch — получить изменения без слияния
+git clone URL — клонировать репозиторий
+git restore file — откатить изменения в файле
+git restore --staged file — убрать файл из индекса
+git commit --amend — изменить последний коммит
