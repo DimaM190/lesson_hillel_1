@@ -1,3 +1,1 @@
 print(id('djkfhglskdhg'))
-
-
