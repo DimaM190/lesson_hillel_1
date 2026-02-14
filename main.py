@@ -1,1 +1,1 @@
-print(id('djkfhglskdhg'))
+print(id("test"))
