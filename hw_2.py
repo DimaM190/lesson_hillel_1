@@ -1,4 +1,4 @@
-user_num = int(input("Enter a four-digit number: "))
+user_num_1 = int(input("Enter a four-digit number: "))
 
 valv_1 = user_num // 1000
 valv_2 = (user_num - valv_1 * 1000) // 100
