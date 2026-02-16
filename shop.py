@@ -5,11 +5,17 @@ from pywebio.input import slider, FLOAT, NUMBER
 from pywebio.input import input as pw_input
 from pywebio.output import put_html, put_success
 
+import shop_clients
+
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler("shop_1.log"), logging.StreamHandler()],
 )
+
+user_id = pw_input("Enter your ID", required=True)
+user_id = user_id.strip()
+
 
 APPLE_PRICE = decimal.Decimal(52.75)
 BANANA_PRICE = decimal.Decimal(81.40)
