@@ -1,19 +1,44 @@
+import decimal
+import logging
 from pywebio.input import slider, FLOAT, NUMBER
 from pywebio.input import input as pw_input
+from pywebio.output import put_html, put_success
 
-from pywebio.output import put_html
-
-CHEESE_PRICE = 286.35
-POTATO_PRICE = 40.32
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[logging.FileHandler("shop.log"), logging.StreamHandler()],
+)
+logging.debug("debug")
+logging.info("info")
+CHEESE_PRICE = decimal.Decimal(286.35)
+POTATO_PRICE = decimal.Decimal(40.32)
 
 # HEADER
 put_html("<h1>Welcome to uor shop</h1>")
 
 # INPUT SELECTION
 
-cheese_eight = slider(
+cheese_weight = slider(
     "Cheese", type=FLOAT, min_value=0, max_value=5, value=0.15, required=True
 )
-
+cheese_weight = decimal.Decimal(cheese_weight).quantize(
+    decimal.Decimal("0.000"), rounding=decimal.ROUND_HALF_UP
+)
 potato_weight = pw_input("Potato", type=NUMBER, required=True, min=0, max=10, value=3)
-pass
+potato_weight = decimal.Decimal(potato_weight).quantize(
+    decimal.Decimal("0.000"), rounding=decimal.ROUND_HALF_UP
+)
+logging.info(f"\n\tcheese_cost= {cheese_weight}\n\tpotato_cost= {potato_weight}")
+
+cheese_cost = (CHEESE_PRICE * cheese_weight).quantize(
+    decimal.Decimal("0.00"), rounding=decimal.ROUND_HALF_UP
+)
+potato_cost = (POTATO_PRICE * potato_weight).quantize(
+    decimal.Decimal("0.00"), rounding=decimal.ROUND_HALF_UP
+)
+total_cost = cheese_cost + potato_cost
+
+put_success(
+    f"Total cost: \ncheese_cost\t{cheese_cost}\npotato_cost\t{potato_cost}\ntotal_cost\t\t{total_cost}"
+)
