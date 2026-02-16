@@ -1,8 +1,8 @@
-Виртуальное окружение: 
+Виртуальное окружение:
 
 win
 
-python -m venv .venv 
+python -m venv .venv
 .\\.venv\\Scripts\\activate
 
 Mc
@@ -10,10 +10,21 @@ sours ./venv/bin/activate
 
 
 
+pip install pywebio
 
 
-форматер
+
+&nbsp;	pip list
 
 
-Ctrl-Alt-l
+
+&nbsp;	pip freeze
+
+
+
+&nbsp;	pip freeze > requirements.txt
+
+
+
+&nbsp;	pip install -r .\\requirements.txt
 
