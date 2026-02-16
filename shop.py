@@ -8,7 +8,7 @@ from pywebio.output import put_html, put_success
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("shop.log"), logging.StreamHandler()],
+    handlers=[logging.FileHandler("shop_1.log"), logging.StreamHandler()],
 )
 
 APPLE_PRICE = decimal.Decimal(52.75)
