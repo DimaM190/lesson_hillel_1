@@ -56,5 +56,3 @@ else:
     shop_clients.CLIENTS.append(new_client_id)
     registered_users = ",\n".join(shop_clients.CLIENTS)
     put_success(registered_users)
-
-
