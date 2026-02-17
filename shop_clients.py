@@ -19,3 +19,5 @@ CLIENTS = [
     "e5gr36r7gv1e3bry",
     "e5gr36r7gv1e3bry",
 ]
+
+OPEN_DOOR_DAY = False
