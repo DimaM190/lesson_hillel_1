@@ -14,8 +14,8 @@ logging.basicConfig(
     handlers=[logging.FileHandler("shop_1.log"), logging.StreamHandler()],
 )
 # PRICES
-APPLE_PRICE = decimal.Decimal(52.75)
-BANANA_PRICE = decimal.Decimal(81.40)
+APPLE_PRICE = decimal.Decimal(str(52.75))
+BANANA_PRICE = decimal.Decimal(str(81.40))
 
 # HEADER
 put_html("<h1>Welcome to our Fruit Shop</h1>")
