@@ -1,4 +1,4 @@
-#доработка калькулятора
+# доработка калькулятора
 while True:
 
     im_num1 = input("Enter the first number: ").strip()
