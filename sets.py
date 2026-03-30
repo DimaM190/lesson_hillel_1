@@ -1,6 +1,6 @@
 from enum import unique
 
-some_list = [55, 656, 898, 55, 55, "Alex"]
+some_list = [55, 656, 898, 22222222222222222222, 55, 55, "Alex"]
 some_list2 = [55, 656, 898, 55, 55, 11111111111111, "Alex", "5"]
 some_iterable = "lkdhflejhfflkjehf4g5lj4f86heglr"
 target_dict = {}
@@ -30,6 +30,26 @@ created_set.discard(2222)
 # сравнения
 
 set1 = set(some_list)
+set2 = set(some_list2)
 
+# union
+union_result1 = set1.union(set2)
+union_result2 = set1 | set2
 
+# common
+
+common1 = set1.intersection(set2)
+common2 = set1 & set2
+
+# difference
+
+dif1 = set1.difference(set2)
+dif2 = set1 - set2
+
+# common difference
+common_dif1 = set1 ^ set2
+common_dif2 = set1.symmetric_difference(set2)
+
+for el in set1:
+    print(el)
 pass
