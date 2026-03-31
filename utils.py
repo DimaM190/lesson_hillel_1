@@ -9,11 +9,17 @@ def get_json_data(entity_name: str) -> list[dict]:
     response = requests.get(url, params=params)
     response_json = response.json()
     entities = response_json[entity_name]
+
     return entities
 
 
-def get_user_contact_data(user: dict) -> dict:
-    return user
+def _get_user_contact_data(user: dict) -> dict:
+    sanitized_user_data = {
+        "firstName": user["firstName"],
+        "lastName": user["lastName"],
+        "phone": user["phone"],
+    }
+    return sanitized_user_data
 
 
 def get_users_in_state(state: str) -> list[dict]:
@@ -21,5 +27,6 @@ def get_users_in_state(state: str) -> list[dict]:
     users_in_state = []
     for user in users:
         if user["address"]["state"] == state:
-            users_in_state.append(user)
+            user_contact = _get_user_contact_data(user)
+            users_in_state.append(user_contact)
     return users_in_state
