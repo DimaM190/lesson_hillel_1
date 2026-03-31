@@ -1,4 +1,1 @@
-print(id("test"))
 
-
-pass
