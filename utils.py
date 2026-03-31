@@ -16,7 +16,16 @@ def get_division(dividend: int, divisor: int) -> float:
     result = dividend / divisor
     return result
 
-#
+
+def send_email(recipient: str, email_body) -> None:
+    print(f"sending emeil to {recipient}...".format(recipient))
 
 
+def validate_not_hashable(value) -> None:
+    hash(value)
 
+
+def send_email_manager() -> None:
+    manager_mail = "example@ukr.net"
+    text = "rgetgetg"
+    send_email(manager_mail, text)
