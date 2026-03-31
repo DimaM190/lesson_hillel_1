@@ -8,7 +8,7 @@ from utils import (
 )
 
 my_unique_values1 = get_unique_values("some_iterable")
-my_unique_values2 = get_unique_values([])
+my_unique_values2 = get_unique_values([5])
 my_unique_values3 = get_unique_values({5, 6})
 
 validate_not_hashable(5)
@@ -18,5 +18,5 @@ email = "example2@ukr.net"
 if is_valid_email(email):
     send_email(email_body="hello", recipient=email)
 
-fraсtion = get_division(10, 0)
+fraсtion = get_division(10, 2)
 print(fraсtion)

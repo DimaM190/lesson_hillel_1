@@ -1,6 +1,3 @@
-from homework.hw_6_3 import result
-
-
 def get_unique_values(some_itersble: list[str, bool, int, float] | set | str) -> set:
 
     unique_values = set(some_itersble)
