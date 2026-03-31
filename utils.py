@@ -1,3 +1,6 @@
+from homework.hw_6_3 import result
+
+
 def get_unique_values(some_itersble: list[str, bool, int, float] | set | str) -> set:
 
     unique_values = set(some_itersble)
@@ -29,3 +32,11 @@ def send_email_manager() -> None:
     manager_mail = "example@ukr.net"
     text = "rgetgetg"
     send_email(manager_mail, text)
+
+
+def is_valid_email(emeil_candidate: str) -> bool:
+    # if "@" in emeil_candidate:
+    # return True
+    # return False
+
+    return "@" in emeil_candidate
